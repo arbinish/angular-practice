@@ -1,0 +1,7 @@
+<a style="position:fixed; top:1em; left: 1em" href="#/add" class="btn btn-success">Add User</a><br/>
+<ul class="col-md-offset-1" style="list-style-type: none">
+    <li class="row" ng-repeat="user in users" ng-model="user"><span class="col-md-1">{{$index + 1}}</span><span class="col-md-5">{{user.name}}&nbsp;&rarr;&nbsp;{{user.email}}</span>
+    	<a class="btn btn-info glyphicon glyphicon-edit" href="#/user/{{user.id}}"></a>
+    	<span class="btn btn-danger glyphicon glyphicon-trash" ng-click="delete($index)"></span>
+	</li>
+</ul>
