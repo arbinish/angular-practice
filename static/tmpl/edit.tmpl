@@ -1,3 +1,5 @@
-<input type="text" ng-model="user.name"/>&nbsp;&nbsp;
-<input type="text" ng-model="user.email" size="40"/><br/><br/>
-<button class="btn btn-medium btn-primary" ng-click="saveUser(user)">save</button>
+<form name="editForm" class="well row" novalidate ng-submit="saveUser(user)">
+  <input type="text" class="col-lg-3" ng-model="user.name" required ng-minlength="3"/>&nbsp;&nbsp;
+  <input type="email" ng-model="user.email" class="col-lg-4" required/>&nbsp;&nbsp;
+  <button class="col-lg-1 btn btn-sm btn-success glyphicon-floppy-disk glyphicon"></button>
+</form>

@@ -42,7 +42,11 @@ app.controller('editCtrl', function($scope, User, $location, $routeParams){
 
 app.controller('addCtrl', function($scope, $location, User) {
   $scope.user = new User;
-  $scope.save = function() {
+  $scope.save = function(valid) {
+    if (!valid) {
+      console.log('invalid form');
+      return false;
+    }
     $scope.user.$create(function(data) {
       console.log('adding', data);
       $location.path('/');

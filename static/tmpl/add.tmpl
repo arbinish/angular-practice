@@ -1,4 +1,6 @@
-<h3> create user</h3>
-<input ng-model="user.name" placeholder="name ..."/>
-<input ng-model="user.email" placeholder="email ..."/>
-<a class="btn btn-success" ng-click="save()">Save</a>
+<h3 class="">Add a new user</h3><hr/>
+<form class="well row" name="addForm" ng-submit="save(addForm.$valid)" novalidate> 
+  <input ng-model="user.name" class="col-lg-3 btn-sm" placeholder="name ..." ng-required type="text" ng-minlength="3"/>
+  <input ng-model="user.email" class="col-lg-4 btn-sm" placeholder="email ..." type="email" ng-required/>
+  <button class="btn col-lg-1 btn-sm btn-success" type="submit">Save</button>
+</form>

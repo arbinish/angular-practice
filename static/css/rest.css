@@ -1,3 +1,11 @@
+form input.ng-dirty.ng-invalid {
+  border: 2px solid red;
+}
+
+form input {
+  outline: none;
+}
+
 .name {
     width: 7em;
     display: table-cell;
